@@ -193,3 +193,38 @@ int main(void)
     }
 }*/
 
+
+
+/*void rgb_control(int red, int green, int blue){
+	OCR0 = red;
+	OCR1A = green;
+	OCR1B = blue;
+}
+
+void main(void)
+{
+	DDRB = 0xFF;  // OC0(PB4)출력설정
+	TCCR0 = 7A; 
+	int r = 255;
+	int g = 0;
+	int b = 0;
+	while(1)
+	{
+		for (int i = 0; i < 256; i++)
+		{
+			rgb_control(r--, g++, b);
+			_delay_ms(10);
+		}
+		for (int i = 0; i < 256; i++)
+		{
+			rgb_control(r, g--, b++);
+			_delay_ms(10);
+		}
+		for (int i = 0; i < 256; i++)
+		{
+			rgb_control(r++, g, b--);
+			_delay_ms(10);
+		}
+	}
+}
+*/

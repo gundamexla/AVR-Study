@@ -1,0 +1,792 @@
+
+DHT11.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000018  00800100  000003a2  00000436  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003a2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000006  00800118  00800118  0000044e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000044e  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000068  00000000  00000000  0000047e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000be2  00000000  00000000  000004e6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000002d7  00000000  00000000  000010c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000004ba  00000000  00000000  0000139f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000d0  00000000  00000000  0000185c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000213  00000000  00000000  0000192c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000032b  00000000  00000000  00001b3f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000058  00000000  00000000  00001e6a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e2 ea       	ldi	r30, 0xA2	; 162
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a8 31       	cpi	r26, 0x18	; 24
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	a8 e1       	ldi	r26, 0x18	; 24
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	ae 31       	cpi	r26, 0x1E	; 30
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	b9 d0       	rcall	.+370    	; 0x236 <main>
+  c4:	6c c1       	rjmp	.+728    	; 0x39e <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <Request>:
+    }
+}
+
+void Request()				// ATMega128로 스타트 펄스 전달 & 응답 과정
+{
+	DDRD |= BV(DHT11_PIN);
+  c8:	8e 9a       	sbi	0x11, 6	; 17
+	PORTD &= ~BV(DHT11_PIN);	// PD4 LOW
+  ca:	96 98       	cbi	0x12, 6	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  cc:	2f ef       	ldi	r18, 0xFF	; 255
+  ce:	89 ef       	ldi	r24, 0xF9	; 249
+  d0:	90 e0       	ldi	r25, 0x00	; 0
+  d2:	21 50       	subi	r18, 0x01	; 1
+  d4:	80 40       	sbci	r24, 0x00	; 0
+  d6:	90 40       	sbci	r25, 0x00	; 0
+  d8:	e1 f7       	brne	.-8      	; 0xd2 <Request+0xa>
+  da:	00 c0       	rjmp	.+0      	; 0xdc <Request+0x14>
+  dc:	00 00       	nop
+	_delay_ms(20);
+	PORTD |= BV(DHT11_PIN);	// PD4 HIGH
+  de:	96 9a       	sbi	0x12, 6	; 18
+  e0:	08 95       	ret
+
+000000e2 <Response>:
+}
+
+void Response()				// 온습도 센서로부터 응답
+{
+	DDRD &= ~BV(DHT11_PIN); // PD4 LOW
+  e2:	8e 98       	cbi	0x11, 6	; 17
+	while(PIND & BV(DHT11_PIN));
+  e4:	86 99       	sbic	0x10, 6	; 16
+  e6:	fe cf       	rjmp	.-4      	; 0xe4 <Response+0x2>
+	while((PIND & BV(DHT11_PIN))==0);
+  e8:	86 9b       	sbis	0x10, 6	; 16
+  ea:	fe cf       	rjmp	.-4      	; 0xe8 <Response+0x6>
+	while(PIND & BV(DHT11_PIN));
+  ec:	86 99       	sbic	0x10, 6	; 16
+  ee:	fe cf       	rjmp	.-4      	; 0xec <Response+0xa>
+}
+  f0:	08 95       	ret
+
+000000f2 <Receive_data>:
+
+uint8_t Receive_data()
+{
+  f2:	88 e0       	ldi	r24, 0x08	; 8
+  f4:	90 e0       	ldi	r25, 0x00	; 0
+	for (int q=0; q<8; q++)
+	{
+		while((PIND & BV(DHT11_PIN)) == 0); //비트가 0인지 1인지 체크
+  f6:	86 9b       	sbis	0x10, 6	; 16
+  f8:	fe cf       	rjmp	.-4      	; 0xf6 <Receive_data+0x4>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  fa:	20 ea       	ldi	r18, 0xA0	; 160
+  fc:	2a 95       	dec	r18
+  fe:	f1 f7       	brne	.-4      	; 0xfc <Receive_data+0xa>
+		_delay_us(30);
+		if(PIND & BV(DHT11_PIN)) //HIGH가 30ms보다 크면
+ 100:	86 9b       	sbis	0x10, 6	; 16
+ 102:	07 c0       	rjmp	.+14     	; 0x112 <Receive_data+0x20>
+		c = (c<<1)|(0x01);	 //HIGH 상태
+ 104:	20 91 18 01 	lds	r18, 0x0118
+ 108:	22 0f       	add	r18, r18
+ 10a:	21 60       	ori	r18, 0x01	; 1
+ 10c:	20 93 18 01 	sts	0x0118, r18
+ 110:	05 c0       	rjmp	.+10     	; 0x11c <Receive_data+0x2a>
+		else
+		c = (c<<1); //LOW 상태
+ 112:	20 91 18 01 	lds	r18, 0x0118
+ 116:	22 0f       	add	r18, r18
+ 118:	20 93 18 01 	sts	0x0118, r18
+		while(PIND & BV(DHT11_PIN));
+ 11c:	86 99       	sbic	0x10, 6	; 16
+ 11e:	fe cf       	rjmp	.-4      	; 0x11c <Receive_data+0x2a>
+ 120:	01 97       	sbiw	r24, 0x01	; 1
+	while(PIND & BV(DHT11_PIN));
+}
+
+uint8_t Receive_data()
+{
+	for (int q=0; q<8; q++)
+ 122:	00 97       	sbiw	r24, 0x00	; 0
+ 124:	41 f7       	brne	.-48     	; 0xf6 <Receive_data+0x4>
+		else
+		c = (c<<1); //LOW 상태
+		while(PIND & BV(DHT11_PIN));
+	}
+	return c;
+}
+ 126:	80 91 18 01 	lds	r24, 0x0118
+ 12a:	08 95       	ret
+
+0000012c <COMMAND>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 12c:	ef e3       	ldi	r30, 0x3F	; 63
+ 12e:	ff e1       	ldi	r31, 0x1F	; 31
+ 130:	31 97       	sbiw	r30, 0x01	; 1
+ 132:	f1 f7       	brne	.-4      	; 0x130 <COMMAND+0x4>
+ 134:	00 c0       	rjmp	.+0      	; 0x136 <COMMAND+0xa>
+ 136:	00 00       	nop
+
+void COMMAND(unsigned char byte)
+{
+	_delay_ms(2);
+
+	PORTB=byte&0xf0;// 상위4비트 명령어 쓰기
+ 138:	98 2f       	mov	r25, r24
+ 13a:	90 7f       	andi	r25, 0xF0	; 240
+ 13c:	98 bb       	out	0x18, r25	; 24
+	PORTB&=0b11111100;  // RS = 0, RW = 0, 명령어를 쓰도록 설정
+ 13e:	98 b3       	in	r25, 0x18	; 24
+ 140:	9c 7f       	andi	r25, 0xFC	; 252
+ 142:	98 bb       	out	0x18, r25	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 144:	f5 e0       	ldi	r31, 0x05	; 5
+ 146:	fa 95       	dec	r31
+ 148:	f1 f7       	brne	.-4      	; 0x146 <COMMAND+0x1a>
+ 14a:	00 00       	nop
+	_delay_us(1);
+	PORTB|=0b00000100; // E = 1, lcd 동작
+ 14c:	c2 9a       	sbi	0x18, 2	; 24
+ 14e:	25 e0       	ldi	r18, 0x05	; 5
+ 150:	2a 95       	dec	r18
+ 152:	f1 f7       	brne	.-4      	; 0x150 <COMMAND+0x24>
+ 154:	00 00       	nop
+	_delay_us(1);
+	PORTB&=0b11111011;// E = 0
+ 156:	c2 98       	cbi	0x18, 2	; 24
+
+	PORTB=(byte<<4)&0xf0;// 하위4비트 명령어 쓰기
+ 158:	e0 e1       	ldi	r30, 0x10	; 16
+ 15a:	8e 9f       	mul	r24, r30
+ 15c:	c0 01       	movw	r24, r0
+ 15e:	11 24       	eor	r1, r1
+ 160:	88 bb       	out	0x18, r24	; 24
+	PORTB&=0b11111100;// RS = 0, RW = 0, 명령어를 쓰도록 설정
+ 162:	88 b3       	in	r24, 0x18	; 24
+ 164:	8c 7f       	andi	r24, 0xFC	; 252
+ 166:	88 bb       	out	0x18, r24	; 24
+ 168:	f5 e0       	ldi	r31, 0x05	; 5
+ 16a:	fa 95       	dec	r31
+ 16c:	f1 f7       	brne	.-4      	; 0x16a <COMMAND+0x3e>
+ 16e:	00 00       	nop
+	_delay_us(1);
+	PORTB|=0b00000100; // E = 1, lcd 동작
+ 170:	c2 9a       	sbi	0x18, 2	; 24
+ 172:	25 e0       	ldi	r18, 0x05	; 5
+ 174:	2a 95       	dec	r18
+ 176:	f1 f7       	brne	.-4      	; 0x174 <COMMAND+0x48>
+ 178:	00 00       	nop
+	_delay_us(1);
+	PORTB&=0b11111011;// E = 0
+ 17a:	c2 98       	cbi	0x18, 2	; 24
+ 17c:	08 95       	ret
+
+0000017e <DATA>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 17e:	ef e3       	ldi	r30, 0x3F	; 63
+ 180:	ff e1       	ldi	r31, 0x1F	; 31
+ 182:	31 97       	sbiw	r30, 0x01	; 1
+ 184:	f1 f7       	brne	.-4      	; 0x182 <DATA+0x4>
+ 186:	00 c0       	rjmp	.+0      	; 0x188 <DATA+0xa>
+ 188:	00 00       	nop
+}
+void DATA(unsigned char byte)
+{
+	_delay_ms(2);
+
+	PORTB=byte&0xf0;// 상위4비트 명령어 쓰기
+ 18a:	98 2f       	mov	r25, r24
+ 18c:	90 7f       	andi	r25, 0xF0	; 240
+ 18e:	98 bb       	out	0x18, r25	; 24
+	PORTB |= 0b00000001;// RS = 1, 데이터 설정
+ 190:	c0 9a       	sbi	0x18, 0	; 24
+	PORTB &= 0b11111101;// RW = 0, 쓰기 설정
+ 192:	c1 98       	cbi	0x18, 1	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 194:	f5 e0       	ldi	r31, 0x05	; 5
+ 196:	fa 95       	dec	r31
+ 198:	f1 f7       	brne	.-4      	; 0x196 <DATA+0x18>
+ 19a:	00 00       	nop
+	_delay_us(1);
+	PORTB|=0b00000100; // E = 1, lcd 동작
+ 19c:	c2 9a       	sbi	0x18, 2	; 24
+ 19e:	25 e0       	ldi	r18, 0x05	; 5
+ 1a0:	2a 95       	dec	r18
+ 1a2:	f1 f7       	brne	.-4      	; 0x1a0 <DATA+0x22>
+ 1a4:	00 00       	nop
+	_delay_us(1);
+	PORTB&=0b11111011;// E = 0
+ 1a6:	c2 98       	cbi	0x18, 2	; 24
+
+	PORTB=(byte<<4)&0xf0;// 하위4비트 데이터 쓰기
+ 1a8:	e0 e1       	ldi	r30, 0x10	; 16
+ 1aa:	8e 9f       	mul	r24, r30
+ 1ac:	c0 01       	movw	r24, r0
+ 1ae:	11 24       	eor	r1, r1
+ 1b0:	88 bb       	out	0x18, r24	; 24
+	PORTB |= 0b00000001;// RS = 1, 데이터 설정
+ 1b2:	c0 9a       	sbi	0x18, 0	; 24
+	PORTB &= 0b11111101;// RW = 0, 쓰기 설정
+ 1b4:	c1 98       	cbi	0x18, 1	; 24
+ 1b6:	f5 e0       	ldi	r31, 0x05	; 5
+ 1b8:	fa 95       	dec	r31
+ 1ba:	f1 f7       	brne	.-4      	; 0x1b8 <DATA+0x3a>
+ 1bc:	00 00       	nop
+	_delay_us(1);
+	PORTB|=0b00000100; // E = 1, lcd 동작
+ 1be:	c2 9a       	sbi	0x18, 2	; 24
+ 1c0:	25 e0       	ldi	r18, 0x05	; 5
+ 1c2:	2a 95       	dec	r18
+ 1c4:	f1 f7       	brne	.-4      	; 0x1c2 <DATA+0x44>
+ 1c6:	00 00       	nop
+	_delay_us(1);
+	PORTB&=0b11111011;// E = 0
+ 1c8:	c2 98       	cbi	0x18, 2	; 24
+ 1ca:	08 95       	ret
+
+000001cc <LCD_INIT>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1cc:	2f ef       	ldi	r18, 0xFF	; 255
+ 1ce:	86 e7       	ldi	r24, 0x76	; 118
+ 1d0:	91 e0       	ldi	r25, 0x01	; 1
+ 1d2:	21 50       	subi	r18, 0x01	; 1
+ 1d4:	80 40       	sbci	r24, 0x00	; 0
+ 1d6:	90 40       	sbci	r25, 0x00	; 0
+ 1d8:	e1 f7       	brne	.-8      	; 0x1d2 <LCD_INIT+0x6>
+ 1da:	00 c0       	rjmp	.+0      	; 0x1dc <LCD_INIT+0x10>
+ 1dc:	00 00       	nop
+void LCD_INIT(void)
+{
+	_delay_ms(30);	// 전원 투입 후 30ms 이상 지연
+	
+	//Function set
+	COMMAND(0b00101000);
+ 1de:	88 e2       	ldi	r24, 0x28	; 40
+ 1e0:	a5 df       	rcall	.-182    	; 0x12c <COMMAND>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1e2:	20 ed       	ldi	r18, 0xD0	; 208
+ 1e4:	2a 95       	dec	r18
+ 1e6:	f1 f7       	brne	.-4      	; 0x1e4 <LCD_INIT+0x18>
+	// 인터페이스(DL)=0(4bit), 라인(N)=1(2라인), 폰트(F)=0(5*8 dot)
+	_delay_us(39);	// 39us 이상 지연
+
+	//Display ON/OFF Control
+	COMMAND(0b00001100);
+ 1e8:	8c e0       	ldi	r24, 0x0C	; 12
+ 1ea:	a0 df       	rcall	.-192    	; 0x12c <COMMAND>
+ 1ec:	80 ed       	ldi	r24, 0xD0	; 208
+ 1ee:	8a 95       	dec	r24
+ 1f0:	f1 f7       	brne	.-4      	; 0x1ee <LCD_INIT+0x22>
+	// 화면 표시(D)=1(on), 커서(C)=0(off), 블링크(B)=0(off)
+	_delay_us(39);	// 39us 이상 지연
+
+	//Clear Display
+	COMMAND(0b00000001);
+ 1f2:	81 e0       	ldi	r24, 0x01	; 1
+ 1f4:	9b df       	rcall	.-202    	; 0x12c <COMMAND>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1f6:	87 ee       	ldi	r24, 0xE7	; 231
+ 1f8:	97 e1       	ldi	r25, 0x17	; 23
+ 1fa:	01 97       	sbiw	r24, 0x01	; 1
+ 1fc:	f1 f7       	brne	.-4      	; 0x1fa <LCD_INIT+0x2e>
+ 1fe:	00 c0       	rjmp	.+0      	; 0x200 <LCD_INIT+0x34>
+ 200:	00 00       	nop
+	// 화면을 클리어하고 , 커서가 홈위치인 0번지로 돌아감.
+	_delay_ms(1.53);	// 1.53ms 이상 지연
+
+	//Entry Mode Set
+	COMMAND(0b00000110);
+ 202:	86 e0       	ldi	r24, 0x06	; 6
+ 204:	93 cf       	rjmp	.-218    	; 0x12c <COMMAND>
+ 206:	08 95       	ret
+
+00000208 <LCD_CLEAR>:
+	// 커서방향(I/D)=1(address증가), 표시이동(S)=0(이동하지 않음)
+}
+
+void LCD_CLEAR(){
+	COMMAND(0b00000001);
+ 208:	81 e0       	ldi	r24, 0x01	; 1
+ 20a:	90 df       	rcall	.-224    	; 0x12c <COMMAND>
+ 20c:	87 ee       	ldi	r24, 0xE7	; 231
+ 20e:	97 e1       	ldi	r25, 0x17	; 23
+ 210:	01 97       	sbiw	r24, 0x01	; 1
+ 212:	f1 f7       	brne	.-4      	; 0x210 <LCD_CLEAR+0x8>
+ 214:	00 c0       	rjmp	.+0      	; 0x216 <LCD_CLEAR+0xe>
+ 216:	00 00       	nop
+ 218:	08 95       	ret
+
+0000021a <DATASTR>:
+	// 화면을 클리어하고 , 커서가 홈위치인 0번지로 돌아감.
+	_delay_ms(1.53);	// 1.53ms 이상 지연
+}
+
+void DATASTR(const char* str){
+ 21a:	cf 93       	push	r28
+ 21c:	df 93       	push	r29
+ 21e:	ec 01       	movw	r28, r24
+	
+	for(int i =0; str[i]; i++){
+ 220:	88 81       	ld	r24, Y
+ 222:	88 23       	and	r24, r24
+ 224:	29 f0       	breq	.+10     	; 0x230 <DATASTR+0x16>
+ 226:	21 96       	adiw	r28, 0x01	; 1
+		DATA(str[i]);
+ 228:	aa df       	rcall	.-172    	; 0x17e <DATA>
+	_delay_ms(1.53);	// 1.53ms 이상 지연
+}
+
+void DATASTR(const char* str){
+	
+	for(int i =0; str[i]; i++){
+ 22a:	89 91       	ld	r24, Y+
+ 22c:	81 11       	cpse	r24, r1
+ 22e:	fc cf       	rjmp	.-8      	; 0x228 <DATASTR+0xe>
+		DATA(str[i]);
+	}
+}
+ 230:	df 91       	pop	r29
+ 232:	cf 91       	pop	r28
+ 234:	08 95       	ret
+
+00000236 <main>:
+void Request();				// ATMega128로 스타트 펄스 전달 & 응답 과정
+void Response();			// 온습도 센서로부터 응답
+uint8_t Receive_data();
+
+int main(void)
+{
+ 236:	cf 93       	push	r28
+ 238:	df 93       	push	r29
+ 23a:	00 d0       	rcall	.+0      	; 0x23c <main+0x6>
+ 23c:	00 d0       	rcall	.+0      	; 0x23e <main+0x8>
+ 23e:	1f 92       	push	r1
+ 240:	cd b7       	in	r28, 0x3d	; 61
+ 242:	de b7       	in	r29, 0x3e	; 62
+	DDRB = 0xff;
+ 244:	8f ef       	ldi	r24, 0xFF	; 255
+ 246:	87 bb       	out	0x17, r24	; 23
+	PORTB = 0x00;
+ 248:	18 ba       	out	0x18, r1	; 24
+	
+	char data[5];
+	LCD_INIT();
+ 24a:	c0 df       	rcall	.-128    	; 0x1cc <LCD_INIT>
+void MOVE(int y, int x)     //커서 이동
+{
+	unsigned char data;
+	if(y==1) 	data=0x80+x-1;           //1행
+	else     	data=0xc0+x-1;            //2행
+	COMMAND(data);
+ 24c:	80 e8       	ldi	r24, 0x80	; 128
+ 24e:	6e df       	rcall	.-292    	; 0x12c <COMMAND>
+	PORTB = 0x00;
+	
+	char data[5];
+	LCD_INIT();
+	MOVE(1,1);
+	DATASTR("Humidity =");
+ 250:	80 e0       	ldi	r24, 0x00	; 0
+ 252:	91 e0       	ldi	r25, 0x01	; 1
+ 254:	e2 df       	rcall	.-60     	; 0x21a <DATASTR>
+void MOVE(int y, int x)     //커서 이동
+{
+	unsigned char data;
+	if(y==1) 	data=0x80+x-1;           //1행
+	else     	data=0xc0+x-1;            //2행
+	COMMAND(data);
+ 256:	80 ec       	ldi	r24, 0xC0	; 192
+ 258:	69 df       	rcall	.-302    	; 0x12c <COMMAND>
+	char data[5];
+	LCD_INIT();
+	MOVE(1,1);
+	DATASTR("Humidity =");
+	MOVE(2,1);
+	DATASTR("Temp =");
+ 25a:	8b e0       	ldi	r24, 0x0B	; 11
+ 25c:	91 e0       	ldi	r25, 0x01	; 1
+ 25e:	dd df       	rcall	.-70     	; 0x21a <DATASTR>
+	
+    while(1)
+    {
+        Request();
+ 260:	33 df       	rcall	.-410    	; 0xc8 <Request>
+		Response();
+ 262:	3f df       	rcall	.-386    	; 0xe2 <Response>
+		I_RH = Receive_data(); // 습도의 정수
+ 264:	46 df       	rcall	.-372    	; 0xf2 <Receive_data>
+ 266:	80 93 1c 01 	sts	0x011C, r24
+		D_RH = Receive_data(); // 습도의 실수
+ 26a:	43 df       	rcall	.-378    	; 0xf2 <Receive_data>
+ 26c:	80 93 19 01 	sts	0x0119, r24
+		I_Temp = Receive_data(); //온도의 정수
+ 270:	40 df       	rcall	.-384    	; 0xf2 <Receive_data>
+ 272:	80 93 1b 01 	sts	0x011B, r24
+		D_Temp = Receive_data(); //온도의 실수
+ 276:	3d df       	rcall	.-390    	; 0xf2 <Receive_data>
+ 278:	80 93 1d 01 	sts	0x011D, r24
+		CheckSum = Receive_data(); //모든 세그먼트의 체크섬
+ 27c:	3a df       	rcall	.-396    	; 0xf2 <Receive_data>
+ 27e:	80 93 1a 01 	sts	0x011A, r24
+		
+		if((I_RH+D_RH+I_Temp+D_Temp)!=CheckSum){
+ 282:	20 91 1c 01 	lds	r18, 0x011C
+ 286:	30 e0       	ldi	r19, 0x00	; 0
+ 288:	90 91 19 01 	lds	r25, 0x0119
+ 28c:	a9 01       	movw	r20, r18
+ 28e:	49 0f       	add	r20, r25
+ 290:	51 1d       	adc	r21, r1
+ 292:	90 91 1b 01 	lds	r25, 0x011B
+ 296:	49 0f       	add	r20, r25
+ 298:	51 1d       	adc	r21, r1
+ 29a:	90 91 1d 01 	lds	r25, 0x011D
+ 29e:	49 0f       	add	r20, r25
+ 2a0:	51 1d       	adc	r21, r1
+ 2a2:	90 e0       	ldi	r25, 0x00	; 0
+ 2a4:	48 17       	cp	r20, r24
+ 2a6:	59 07       	cpc	r21, r25
+ 2a8:	29 f0       	breq	.+10     	; 0x2b4 <main+0x7e>
+			LCD_CLEAR();
+ 2aa:	ae df       	rcall	.-164    	; 0x208 <LCD_CLEAR>
+			DATASTR("ERROR");
+ 2ac:	82 e1       	ldi	r24, 0x12	; 18
+ 2ae:	91 e0       	ldi	r25, 0x01	; 1
+ 2b0:	b4 df       	rcall	.-152    	; 0x21a <DATASTR>
+ 2b2:	38 c0       	rjmp	.+112    	; 0x324 <main+0xee>
+    } else if (__radix < 2 || __radix > 36) {
+	*__s = 0;
+	return __s;
+    } else {
+	extern char *__itoa_ncheck (int, char *, unsigned char);
+	return __itoa_ncheck (__val, __s, __radix);
+ 2b4:	4a e0       	ldi	r20, 0x0A	; 10
+ 2b6:	be 01       	movw	r22, r28
+ 2b8:	6f 5f       	subi	r22, 0xFF	; 255
+ 2ba:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2bc:	c9 01       	movw	r24, r18
+ 2be:	3c d0       	rcall	.+120    	; 0x338 <__itoa_ncheck>
+void MOVE(int y, int x)     //커서 이동
+{
+	unsigned char data;
+	if(y==1) 	data=0x80+x-1;           //1행
+	else     	data=0xc0+x-1;            //2행
+	COMMAND(data);
+ 2c0:	8b e8       	ldi	r24, 0x8B	; 139
+ 2c2:	34 df       	rcall	.-408    	; 0x12c <COMMAND>
+			DATASTR("ERROR");
+		}
+		else{
+			itoa(I_RH, data, 10);
+			MOVE(1, 12);
+			DATASTR(data);
+ 2c4:	ce 01       	movw	r24, r28
+ 2c6:	01 96       	adiw	r24, 0x01	; 1
+ 2c8:	a8 df       	rcall	.-176    	; 0x21a <DATASTR>
+			DATA('.');
+ 2ca:	8e e2       	ldi	r24, 0x2E	; 46
+ 2cc:	58 df       	rcall	.-336    	; 0x17e <DATA>
+			
+			itoa(D_RH, data, 10);
+ 2ce:	80 91 19 01 	lds	r24, 0x0119
+ 2d2:	4a e0       	ldi	r20, 0x0A	; 10
+ 2d4:	be 01       	movw	r22, r28
+ 2d6:	6f 5f       	subi	r22, 0xFF	; 255
+ 2d8:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2da:	90 e0       	ldi	r25, 0x00	; 0
+ 2dc:	2d d0       	rcall	.+90     	; 0x338 <__itoa_ncheck>
+			DATASTR(data);
+ 2de:	ce 01       	movw	r24, r28
+ 2e0:	01 96       	adiw	r24, 0x01	; 1
+ 2e2:	9b df       	rcall	.-202    	; 0x21a <DATASTR>
+			DATA('%');
+ 2e4:	85 e2       	ldi	r24, 0x25	; 37
+ 2e6:	4b df       	rcall	.-362    	; 0x17e <DATA>
+			
+			itoa(I_Temp, data, 10);
+ 2e8:	80 91 1b 01 	lds	r24, 0x011B
+ 2ec:	4a e0       	ldi	r20, 0x0A	; 10
+ 2ee:	be 01       	movw	r22, r28
+ 2f0:	6f 5f       	subi	r22, 0xFF	; 255
+ 2f2:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2f4:	90 e0       	ldi	r25, 0x00	; 0
+ 2f6:	20 d0       	rcall	.+64     	; 0x338 <__itoa_ncheck>
+void MOVE(int y, int x)     //커서 이동
+{
+	unsigned char data;
+	if(y==1) 	data=0x80+x-1;           //1행
+	else     	data=0xc0+x-1;            //2행
+	COMMAND(data);
+ 2f8:	87 ec       	ldi	r24, 0xC7	; 199
+ 2fa:	18 df       	rcall	.-464    	; 0x12c <COMMAND>
+			DATASTR(data);
+			DATA('%');
+			
+			itoa(I_Temp, data, 10);
+			MOVE(2, 8);
+			DATASTR(data);
+ 2fc:	ce 01       	movw	r24, r28
+ 2fe:	01 96       	adiw	r24, 0x01	; 1
+ 300:	8c df       	rcall	.-232    	; 0x21a <DATASTR>
+			DATA('.');
+ 302:	8e e2       	ldi	r24, 0x2E	; 46
+ 304:	3c df       	rcall	.-392    	; 0x17e <DATA>
+			
+			itoa(D_Temp, data, 10);
+ 306:	80 91 1d 01 	lds	r24, 0x011D
+ 30a:	4a e0       	ldi	r20, 0x0A	; 10
+ 30c:	be 01       	movw	r22, r28
+ 30e:	6f 5f       	subi	r22, 0xFF	; 255
+ 310:	7f 4f       	sbci	r23, 0xFF	; 255
+ 312:	90 e0       	ldi	r25, 0x00	; 0
+ 314:	11 d0       	rcall	.+34     	; 0x338 <__itoa_ncheck>
+			DATASTR(data);
+ 316:	ce 01       	movw	r24, r28
+ 318:	01 96       	adiw	r24, 0x01	; 1
+ 31a:	7f df       	rcall	.-258    	; 0x21a <DATASTR>
+			DATA(0xDF);
+ 31c:	8f ed       	ldi	r24, 0xDF	; 223
+ 31e:	2f df       	rcall	.-418    	; 0x17e <DATA>
+			DATA('C');
+ 320:	83 e4       	ldi	r24, 0x43	; 67
+ 322:	2d df       	rcall	.-422    	; 0x17e <DATA>
+ 324:	2f ef       	ldi	r18, 0xFF	; 255
+ 326:	8b e7       	ldi	r24, 0x7B	; 123
+ 328:	92 e9       	ldi	r25, 0x92	; 146
+ 32a:	21 50       	subi	r18, 0x01	; 1
+ 32c:	80 40       	sbci	r24, 0x00	; 0
+ 32e:	90 40       	sbci	r25, 0x00	; 0
+ 330:	e1 f7       	brne	.-8      	; 0x32a <main+0xf4>
+ 332:	00 c0       	rjmp	.+0      	; 0x334 <main+0xfe>
+ 334:	00 00       	nop
+ 336:	94 cf       	rjmp	.-216    	; 0x260 <main+0x2a>
+
+00000338 <__itoa_ncheck>:
+ 338:	bb 27       	eor	r27, r27
+ 33a:	4a 30       	cpi	r20, 0x0A	; 10
+ 33c:	31 f4       	brne	.+12     	; 0x34a <__itoa_ncheck+0x12>
+ 33e:	99 23       	and	r25, r25
+ 340:	22 f4       	brpl	.+8      	; 0x34a <__itoa_ncheck+0x12>
+ 342:	bd e2       	ldi	r27, 0x2D	; 45
+ 344:	90 95       	com	r25
+ 346:	81 95       	neg	r24
+ 348:	9f 4f       	sbci	r25, 0xFF	; 255
+ 34a:	01 c0       	rjmp	.+2      	; 0x34e <__utoa_common>
+
+0000034c <__utoa_ncheck>:
+ 34c:	bb 27       	eor	r27, r27
+
+0000034e <__utoa_common>:
+ 34e:	fb 01       	movw	r30, r22
+ 350:	55 27       	eor	r21, r21
+ 352:	aa 27       	eor	r26, r26
+ 354:	88 0f       	add	r24, r24
+ 356:	99 1f       	adc	r25, r25
+ 358:	aa 1f       	adc	r26, r26
+ 35a:	a4 17       	cp	r26, r20
+ 35c:	10 f0       	brcs	.+4      	; 0x362 <__utoa_common+0x14>
+ 35e:	a4 1b       	sub	r26, r20
+ 360:	83 95       	inc	r24
+ 362:	50 51       	subi	r21, 0x10	; 16
+ 364:	b9 f7       	brne	.-18     	; 0x354 <__utoa_common+0x6>
+ 366:	a0 5d       	subi	r26, 0xD0	; 208
+ 368:	aa 33       	cpi	r26, 0x3A	; 58
+ 36a:	08 f0       	brcs	.+2      	; 0x36e <__utoa_common+0x20>
+ 36c:	a9 5d       	subi	r26, 0xD9	; 217
+ 36e:	a1 93       	st	Z+, r26
+ 370:	00 97       	sbiw	r24, 0x00	; 0
+ 372:	79 f7       	brne	.-34     	; 0x352 <__utoa_common+0x4>
+ 374:	b1 11       	cpse	r27, r1
+ 376:	b1 93       	st	Z+, r27
+ 378:	11 92       	st	Z+, r1
+ 37a:	cb 01       	movw	r24, r22
+ 37c:	00 c0       	rjmp	.+0      	; 0x37e <strrev>
+
+0000037e <strrev>:
+ 37e:	dc 01       	movw	r26, r24
+ 380:	fc 01       	movw	r30, r24
+ 382:	67 2f       	mov	r22, r23
+ 384:	71 91       	ld	r23, Z+
+ 386:	77 23       	and	r23, r23
+ 388:	e1 f7       	brne	.-8      	; 0x382 <strrev+0x4>
+ 38a:	32 97       	sbiw	r30, 0x02	; 2
+ 38c:	04 c0       	rjmp	.+8      	; 0x396 <strrev+0x18>
+ 38e:	7c 91       	ld	r23, X
+ 390:	6d 93       	st	X+, r22
+ 392:	70 83       	st	Z, r23
+ 394:	62 91       	ld	r22, -Z
+ 396:	ae 17       	cp	r26, r30
+ 398:	bf 07       	cpc	r27, r31
+ 39a:	c8 f3       	brcs	.-14     	; 0x38e <strrev+0x10>
+ 39c:	08 95       	ret
+
+0000039e <_exit>:
+ 39e:	f8 94       	cli
+
+000003a0 <__stop_program>:
+ 3a0:	ff cf       	rjmp	.-2      	; 0x3a0 <__stop_program>
