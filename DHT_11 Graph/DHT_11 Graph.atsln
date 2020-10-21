@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Atmel Studio Solution File, Format Version 11.00
-Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "DHT11_Graph", "DHT11_Graph\DHT11_Graph.cproj", "{282E9D40-9FC7-41F1-98C4-004D76D6F7E2}"
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "DHT_11 Graph", "DHT_11 Graph\DHT_11 Graph.cproj", "{0E0C1111-5ACC-46F2-8406-195D930F3B6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|AVR = Release|AVR
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{282E9D40-9FC7-41F1-98C4-004D76D6F7E2}.Debug|AVR.ActiveCfg = Debug|AVR
-		{282E9D40-9FC7-41F1-98C4-004D76D6F7E2}.Debug|AVR.Build.0 = Debug|AVR
-		{282E9D40-9FC7-41F1-98C4-004D76D6F7E2}.Release|AVR.ActiveCfg = Release|AVR
-		{282E9D40-9FC7-41F1-98C4-004D76D6F7E2}.Release|AVR.Build.0 = Release|AVR
+		{0E0C1111-5ACC-46F2-8406-195D930F3B6A}.Debug|AVR.ActiveCfg = Debug|AVR
+		{0E0C1111-5ACC-46F2-8406-195D930F3B6A}.Debug|AVR.Build.0 = Debug|AVR
+		{0E0C1111-5ACC-46F2-8406-195D930F3B6A}.Release|AVR.ActiveCfg = Release|AVR
+		{0E0C1111-5ACC-46F2-8406-195D930F3B6A}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

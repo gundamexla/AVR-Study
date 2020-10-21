@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "SoundSensor", "SoundSensor\SoundSensor.cproj", "{339DEE67-81D7-47E5-B3B5-02D47C340CFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{339DEE67-81D7-47E5-B3B5-02D47C340CFD}.Debug|AVR.ActiveCfg = Debug|AVR
+		{339DEE67-81D7-47E5-B3B5-02D47C340CFD}.Debug|AVR.Build.0 = Debug|AVR
+		{339DEE67-81D7-47E5-B3B5-02D47C340CFD}.Release|AVR.ActiveCfg = Release|AVR
+		{339DEE67-81D7-47E5-B3B5-02D47C340CFD}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

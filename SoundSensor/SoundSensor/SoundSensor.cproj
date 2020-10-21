@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>6.2</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
-    <ProjectGuid>{282e9d40-9fc7-41f1-98c4-004d76d6f7e2}</ProjectGuid>
+    <ProjectGuid>{339dee67-81d7-47e5-b3b5-02d47c340cfd}</ProjectGuid>
     <avrdevice>ATmega128A</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -12,20 +12,20 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>DHT11_Graph</AssemblyName>
-    <Name>DHT11_Graph</Name>
-    <RootNamespace>DHT11_Graph</RootNamespace>
+    <AssemblyName>SoundSensor</AssemblyName>
+    <Name>SoundSensor</Name>
+    <RootNamespace>SoundSensor</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress />
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
-    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
     <AsfFrameworkConfig>
       <framework-data xmlns="">
   <options />
@@ -98,7 +98,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DHT11_Graph.c">
+    <Compile Include="SoundSensor.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
