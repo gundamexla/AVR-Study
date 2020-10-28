@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "TouchSensor_with_Buzzer", "TouchSensor_with_Buzzer\TouchSensor_with_Buzzer.cproj", "{6B83BC51-DDCD-4FAB-8308-D3F3C8EEF69F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B83BC51-DDCD-4FAB-8308-D3F3C8EEF69F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{6B83BC51-DDCD-4FAB-8308-D3F3C8EEF69F}.Debug|AVR.Build.0 = Debug|AVR
+		{6B83BC51-DDCD-4FAB-8308-D3F3C8EEF69F}.Release|AVR.ActiveCfg = Release|AVR
+		{6B83BC51-DDCD-4FAB-8308-D3F3C8EEF69F}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
